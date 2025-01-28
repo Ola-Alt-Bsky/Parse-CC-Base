@@ -1,0 +1,21 @@
+name: Run Submodules
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      with:
+        submodules: 'false'  # Disable automatic submodule checkout
+
+    - name: Set up Git Submodules
+      run: |
+        git submodule init
+        git submodule update --recursive --remote
