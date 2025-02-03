@@ -1,0 +1,21 @@
+[submodule "Python_Version"]
+	path = Python_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-Python
+[submodule "Java_Version"]
+	path = Java_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-Java
+[submodule "Kotlin_Version"]
+	path = Kotlin_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-Kotlin
+[submodule "C#_Version"]
+	path = "C#_Version"
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-C-Sharp
+[submodule "Rust_Version"]
+	path = Rust_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-Rust
+[submodule "Go_Version"]
+	path = Go_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-Go
+[submodule "C++_Version"]
+	path = C++_Version
+	url = https://github.com/Ola-Alt-Bsky/Parse-CC-Base-C-Plus-Plus
