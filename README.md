@@ -240,11 +240,113 @@ standard libraries you can access using the include keyword.
 Basically a kernel developer's dream.
 
 Although, it is pretty basic, which makes sense because it came from a
-basic compiler maker. 
+basic compiler maker. But what if...
 
 # C++ 14 x Microsoft Visual Studio 22
 
-This is techincally the oldest language I used for this project.
+This is techincally the oldest language I used for this project,
+although what I use is far from the original.
+
+Bjarne Stroustrup created "C with classes" in '79, seven years removed
+from the beginnings of C. In his eyes, the existing languages at the
+time were either-
+
+* Great for large scale applications with complex needs, but too slow to 
+be used practically.
+* Great for fast compiling programs but too low level to be used for
+complex large-scale needs.
+
+Stroustrup leaned on prior experience looking at the UNIX Kernel and
+decided to enhance C, which was supposed to be the original bridge-gap,
+with features that Simula (which fell in the first category of existing
+languages) had for large scale development, along with inspiration from
+other langugaes. 
+
+*C with Classes* was the result, which introduced classes, inlining, 
+default arguments for functions, and more. 
+
+1982 marked the creation of, C++, which was Stroustrup next improvement 
+and named by adding the increment operator "++" to C as a symbol of
+additions to the popular language. Overloading, references, better type
+checking, and the return of "//" commenting from BCPL came with C++.
+C++ would also bring the first stream I/O library.
+
+C++ 2.0 would come in 1989 and add multiple inheritance, abstract
+classes, static class functions, protected members, templates, 
+namespaces, and a boolean type.
+
+C++98 would come in 1998 and continue to build upon existing features
+and standardizing the language. The next standard for C++ would be
+C++11 which enlarged the standard library, and C++14 which was more
+minor than the others. C++17 and C++20 would follow after.
+
+With this background, C++14 is the minor update to C++11, the last
+major standard before C++14. C++11 improves on C++98, which improves on
+C++2.0. C++ as a whole served as a means to bring Object-Oriented
+Programming and accessible complexity to a simple, but very powerful
+language. C++'s development principles stress immediately useful
+additions, implemental features, freedom of programming style, 
+user-created types having just as much support as built-in types, and
+optimizing the program. 
+
+One last thing to note is that while C++ builds upon C, it is not an 
+ABSTRACTION of C, and the only thing underneath it should be the
+ASM itself.
+
+## My Experience with C++ 14 and VS 2022
+
+Now, I can put into perspective how I feel about C++. I answered the
+purpose pretty well, so I can now talk about everything else.
+
+Visual Studio's IDE is something you have to get used to. Like alot of
+well developed IDEs it takes some exploring before you can get into a
+flow state developing the program. The first thing I did when starting
+a new C++ project was trying to use CMake, which I promptly failed it
+at first try. I still don't know how to do it, so I guess it is an
+adventure for the future.
+
+In the mean time, getting VS to build my code was pretty easy. It came
+with default x32 and x64 build configurations for both debug and 
+release, so most of the work was pressing a button. The debugger built
+into to VS was great, and gave me plenty of options to work with.
+Syntax highlighting lagged behind a bit with certain changes (i.e.
+uncommenting a block of code I commented to safe for later) and the
+intellisense was pretty run of the mill IMO.
+
+Without the debugger, i think it would have been much harder to find
+problems in my code, but because of that I don't have to think of that
+reality. VS 2022 in full debug mode will stop at the source of the
+exception, and then you can analyze the state to see what went wrong
+with execution.
+
+The organization of the code was bottom up, which meant the main
+function was down at the bottom, followed by other functions, and then
+smaller utility functions that supported the other functions. At the
+top, I declared all the cpp libraries I used, along with a 3rd party
+json library by stating the path to the file from the code's location.
+
+That leads me to dependencies. It was very easy to utilize 1st party
+dependencies as VS 2022 intellisenses all the out-of-box stuff.
+However, there will be times that you forget which library came with
+which standard of C++. When attempting to use the filesystem library,
+I ran into problems before realizing that the library was introduced in
+C++17, meaning I could not use it.
+
+As for third-party stuff, I have the option of using a package manager,
+or copying the files into my project folder and specifying the path to
+it. As you could tell, the latter helped alot when I couldn't figure
+out CMake and the other thing.
+
+Lastly, the syntax is as nice as ever. With C being the mother of alot
+of languages and C++ only adding to it, the syntax is very refined. At
+least the way I used it. I have heard horror stories and the best
+advice I've ever read is that everyone has their own way of using C++,
+and while other people would leverage templates and overloading, I 
+kept it basic so that I could work within my means. Coding the latter
+half of the script forced me to learn what "auto" meant, but once I did
+I was able to use it pretty easily.
+
+## C++ 14 and VS 2022 when turning notes into JSON
 
 # Python 3.12 x JetBrains PyCharm
 
