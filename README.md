@@ -164,9 +164,98 @@ to do the following tasks, broken down into further subtasks:
 Each language will handle these five tasks different, with varying 
 levels of lenience, support, and stubborness for each particular thing.
 
-Without further ado, lets cover the combination that made me realize
-this project was possible.
+Without further ado, lets start the languages in chronological order.
+I think that doing that will help understand how each language feeds
+into each other.
+
+But to do that at all, we first have to understand C.
+
+# The C Language's Creation
+
+C was created by Dennis Ritchie and Ken Thompson around 1972 and 1973 
+for developing Unix utilities. It took off in the 1980s, was 
+standardized by the American National Standards Institute (ANSI), the 
+International Organization for Standardization (ISO, weirdly), and 
+other orgs.
+
+Going back to the early 1970s, Ritchie and Thompson's main goal was
+around the Unix Operating System. At first,the Unix OS was developed in
+assembly, but Thompson was looking for a language that could abstract
+assembly for developing OS utilities. 
+
+Thompson first attempted Fortran, didn't work. After, he turned his
+sights on BCPL, a procedural language designed for creating small
+compilers. BCPL used a front-end parser to convert source code to an
+intermediate form, then used a back-end translator to turn the
+intermediate form into machine code. If this sounds familiar, this
+two-step system would go on to inspire the strategies for Java and 
+Python.
+
+BCPL only had one datatype called a **word**. A word had the same
+number of bytes as the computer's architecture width (i.e. 32-bit).
+BCPL also used operators like +, and ! for pointers, but did no type
+checking as common today.
+
+The most fundemental influence arguably came in it's use of braces,
+which could have been {}, $($), or \[] depending on the hardware at the 
+time.
+
+Although the language was already pretty light Thompson stripped it 
+down and configured it to his needs, which he would call B. 
+
+B had major changes throughout development, guided by preferences like
+a reduction in the whitespace taken up by the source code. Like BCPL, 
+B only had a word type, with some operators treating it like integers
+and other operators treating it like general memory. Common functions 
+such as printn() make their apperance here, such as comparison 
+operators like ==. 
+
+Ritchie and Thompson improved on B, adding a character type, more
+involved types like arrays and the handling of them like pointers
+within specific scenarios, and much more. Eventually, all the new
+additions necessated a new Unix compiler, with C becoming the new name
+of the developing language.
+
+# C as a Language
+
+With this background, we can say that C was created to abstract the
+development of system applications away from Assembly. As a 
+standardized language, C organizes codes using brackets, creates
+changable values called variables by specifying the type (i.e. char) 
+then the name of the variable to be referenced, and allows for decision
+making using switch, if, else, whlie, do, for, break, and continue. 
+
+C allows the defining of pointers to reference variables that take up
+multiple bytes worth of space in memory, which then allows for more
+complex structures such as arrays and structs. If it feels like I am
+forgetting a structure, you are not crazy. We are just not there yet,
+and from the perspective of the UNIX kernel makers, we don't need to
+be. C is supposed to be a general procedural language that bridges the
+gap between low-level memory management (both automatically and 
+manually through keywords like malloc and free) and higher, complex
+programs. C is programming freedom at its most basic level, and cares
+not for holding your hand. If you *really* want to use more, you have
+standard libraries you can access using the include keyword.
+
+Basically a kernel developer's dream.
+
+Although, it is pretty basic, which makes sense because it came from a
+basic compiler maker. 
+
+# C++ 14 x Microsoft Visual Studio 22
+
+This is techincally the oldest language I used for this project.
 
 # Python 3.12 x JetBrains PyCharm
 
+# Java 23 x JetBrains IntelliJ
 
+# C# (.Net 9.0) x Microsoft Visual Studio 22
+
+# Go x Microsoft Visual Studio Code
+
+# Rust x Microsoft Visual Studio Code
+
+# Kotlin x Jetbrains IntelliJ
+
+# A random note about Zig, Perl, and Ruby
