@@ -348,6 +348,75 @@ I was able to use it pretty easily.
 
 ## C++ 14 and VS 2022 when turning notes into JSON
 
+Now lets see how my experience was in relation to the five main subtasks
+I had to do to convert my notes.
+
+The first task whats to get input on where the user's file was. In the
+case of C++, this meant declaring the string variable where the 
+filepath will be placed, and using getline() to read the line to ensure
+that the input isn't cut off early due to possible spaces being in the
+filepath. Afterward, the last thing was ensuring that any quotations
+in the input are removed, as copying a filepath from specific sources
+can have the path be entered as a quoted string into the terminal. This
+process was fairly straightforward to figure out within two attempts.
+
+The second task was reading the contents in from the file path
+provided. This sometimes necessitates exception handling while reading
+each line into an iterable of strings. In C++, vectors were the
+structure of choice to do this, plus a declared string to be a location
+to hold lines while the file is read. A while loop and a file close()
+later, and it is done.
+
+Next comes things I have to program myself, the building of the JSON
+object using the lines. This was made easy as a 3rd-party has created 
+[a very robust JSON library.](https://json.nlohmann.me/) The function
+itself returns a json object and takes the pointer to the vector of
+file content I have created. Due to the way I organize my notes, I can
+store levels of context in strings, as every thing related to one 
+season is stored in one place, as for everything in one epsiode, and
+everything in an attribute specific to an episode. I can go one
+direction and expect the structure of my notes to enable me to just
+record what parent a given value belongs to. 
+
+Making the If statements was simple. However, since this is C/C++, the
+usual resources afforded to me by other high end languages did not
+exist. I wrote utility functions to delete specific characters and to
+trim the leading and trailing whitespace, but doing that made it
+simple to implement. 
+
+As for populating the JSON, being able to call values through a \[]
+operator made it as simple as pie. 
+
+I can not say the same thing for retrieving character, location, and
+song lists. C++14 has set functionality, so that can take care of
+keeping unique items for me. However, I could not figure out a way to
+iterate through my JSON information for what I needed. After alot of
+documentation and chat-gpt, I finally figured out how I could.
+
+JSON Objects and Arrays from this library can be iterated through as an 
+auto& type, with objects being iterated as item pairs, while arrays are
+just values. In addition, I could not get it to work with a switch, but
+using if-else conditions worked just fine.
+
+Lastly, I had to save the JSON information to a folder, which involved
+using some sort of file writing object to create and save the 
+information.
+
+I ran into issues with my C++ standard here, as a lot of information
+on the internet recommended using the **filesystem** standard library.
+However, this library was only introduced in C++17. This meant I had to
+use basic concatanation to dynamically create the filepath I want,
+which isn't as pretty as I would want, but gets the job done. 
+
+From there, I could just create an ofstream variable, use it to open
+new json and txt files, and write the manually created strings to each
+file. 
+
+Overall, using C++ was pretty easy once I figured out how to use it. 
+However, CMake wouldn't work with me, and I have to be aware of
+solutions I find on the internet as they may take advantage of features
+introduced in later standards of C++. 
+
 # Python 3.12 x JetBrains PyCharm
 
 # Java 23 x JetBrains IntelliJ
@@ -359,5 +428,7 @@ I was able to use it pretty easily.
 # Rust x Microsoft Visual Studio Code
 
 # Kotlin x Jetbrains IntelliJ
+
+# Code Length
 
 # A random note about Zig, Perl, and Ruby
