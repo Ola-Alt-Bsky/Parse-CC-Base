@@ -419,6 +419,50 @@ introduced in later standards of C++.
 
 # Python 3.12 x JetBrains PyCharm
 
+Around the time of C++2.0's release, another programming language began
+to take form. Guido van Rossum started the implementation in 1989, with 
+the language being named after _Monty Python's Flying Circus_. It was
+intended to be a successor to ABC, which was a high-level language 
+designed to reduce the amount of lines and content that a programmer
+would need to create an application.
+
+The first version ever released was 0.9.0, which included classes, 
+classes with inheritance, exception handling, functions, and common
+structures that we see today like list, str, and dict. Python would use
+a Module system to organize sets of classes and methods.
+
+By Python 1.0, additonal functional programming tools like lambda, 
+reduce(), filter() and map() were added. van Rossum would move jobs to
+the Corporation for National Research Initiatives (CNRI) and continue
+developing the language, adding complex number support, keyword
+arguments, and more.
+
+Python 2.0 would release in 2000. From 2.1 and onward, it would be
+owned by the Python Software Foundation and use a Python Software 
+Foundation License. New features over time included list comprehension,
+an improved garbage collector, nested scopes, type unification, and
+context management with the `with` keyword.
+
+Python 3.0 is the current major version of Python, and released in 2008.
+It was designed to fix design flaws with Python 2.0 from the ground up,
+at the cost of losing compatibility with Python 2.0 code. 
+
+Over the entire timeline of Python's development, the core philosophy 
+remained unchanged. Python syntax focuses on beautiful, simple,
+readable code. The module system and the ability to easily create
+classes emphasizes a solid foundation where anyone can create an 
+expansive library with relative ease. This makes it a great teaching
+tool - inspired by ABC's teachability - and a serious language good for
+creating complex utilities and software.
+
+Unlike C/C++, Python has an official 3rd-party repository to leverage
+other people's work in PyPi. This allows creators to share their 
+creations across the internet, resulting in packages such as Pandas,
+PyTorch, and Seaborn becoming as crucial to the Python experience as
+the core interpreter and base packages themselves.
+
+## My experience with Python and PyCharm
+
 # Java 23 x JetBrains IntelliJ
 
 # C# (.Net 9.0) x Microsoft Visual Studio 22
